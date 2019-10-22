@@ -8,13 +8,13 @@
   <title>Doctor Appointment - Login & Register</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./css/loginRegister.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/doctor.css" />
 </head>
 
 <body>
   <div class="header">
     <div class="log"></div>
-    <button class="btn btn--red">Logout</button>
+    <button class="btn btn--red js--bt-logout">Logout</button>
   </div>
   <div class="container horizontal-middle">
     <div class="section">
@@ -22,13 +22,32 @@
         Welcome to Doctor Appointment Management System here you will get all information on
         available Doctors in our System and able to take an appointment
       </p>
+      <div class="section__content">
+        <ul class="tabs">
+          <li id="id1" class="tabs__item active-tab js--tab-schedules" onclick="tabHandler(event, 'schedules')">Book
+          </li>
+          <li id="id2" class="tabs__item js--tab-bookings" onclick="tabHandler(event, 'bookings')">Appointments</li>
+        </ul>
+        <div class="tabs__content">
+          <form action="" id="schedules" class="form--set-schedule tab__content js--form-set-schedule">
+            <input type="submit" value='Set' class="btn btn--red-2 btn__set-schedule js--btn-schedule" />
+          </form>
+          <div id="bookings" class="bookings__container tab__content js--bookings">
+            <form action="" class="form-search-bookings display--flex js--form-get-scheduled">
+              <input type="date" class="form__input" name='scheduled' required />
+              <input type="submit" value='Patients' class="btn btn--red-2 btn__get-bookings" />
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <footer class="footer">
     <div class="line"></div>
     <p class="text--small text--grey center-text">&copy Doctor Appointment Management System </p>
   </footer>
-  <script src="./js/login.js"></script>
+  <script type="module" src="../js/patient.js"></script>
+  <script type="module" src="../js/logout.js"></script>
 </body>
 
 </html>
