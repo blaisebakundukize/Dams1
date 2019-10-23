@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="../css/doctor.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/table.css" />
 </head>
 
 <body>
@@ -24,14 +25,302 @@
       </p>
       <div class="section__content">
         <ul class="tabs">
-          <li id="id1" class="tabs__item active-tab js--tab-schedules" onclick="tabHandler(event, 'schedules')">Book
+          <li id="id-schedules" class="tabs__item active-tab js--tab-schedules"
+            onclick="tabHandler(event, 'schedules')">Book
           </li>
           <li id="id2" class="tabs__item js--tab-bookings" onclick="tabHandler(event, 'bookings')">Appointments</li>
         </ul>
         <div class="tabs__content">
-          <form action="" id="schedules" class="form--set-schedule tab__content js--form-set-schedule">
-            <input type="submit" value='Set' class="btn btn--red-2 btn__set-schedule js--btn-schedule" />
-          </form>
+          <div id="schedules" class="tab__item--container tab__content js--schedules-container">
+            <div class="table__container">
+              <table class="doctors-schedules js--docs-schedules">
+                <thead class="table__fixed-header">
+                  <tr>
+                    <th class="col-number">No
+                      <div class="fixed-header">No</div>
+                    </th>
+                    <th class="col-name">Doctor
+                      <div class="fixed-header">Doctor</div>
+                    </th>
+                    <th class="col-department">Department
+                      <div class="fixed-header">Department</div>
+                    </th>
+                    <th class="col-appointment">Date
+                      <div class="fixed-header">Date</div>
+                    </th>
+                    <th class="col-appointment">Next Appointment
+                      <div class="fixed-header">Next Appointment</div>
+                    </th>
+                    <th class="col-actions">Actions
+                      <div class="fixed-header">Actions</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="table__schedules-body">
+                  <!-- <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Blaise</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Blaise Bakundukize</td>
+                    <td>Departmend</td>
+                    <td>2019-23-01</td>
+                    <td>08:20</td>
+                    <td>
+                      <button class="btn btn--green btn--action js--btn-book">book</button>
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
           <div id="bookings" class="bookings__container tab__content js--bookings">
             <form action="" class="form-search-bookings display--flex js--form-get-scheduled">
               <input type="date" class="form__input" name='scheduled' required />

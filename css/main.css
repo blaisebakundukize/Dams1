@@ -11,6 +11,8 @@
   --color-grey-dark-2: #a1a1a1;
   --color-grey-dark-3: #777;
 
+  --color-green-dark-1: #226928;
+
   --color-white: #fff;
 
   --line: 1px solid var(--color-grey-light-3);
@@ -92,6 +94,7 @@ body {
   cursor: pointer;
   position: relative;
   transition: all 0.2s;
+  outline: none;
 }
 
 .btn--red {
@@ -106,6 +109,21 @@ body {
   color: var(--color-white);
   font-weight: 700;
   border: 1px solid var(--color-secondary);
+}
+
+.btn--green {
+  background-color: var(--color-green-dark-1);
+  color: var(--color-white);
+  font-weight: 700;
+  border: 1px solid var(--color-secondary);
+  text-transform: lowercase;
+}
+
+.btn--action {
+  border: none;
+  padding: .4rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .container {
@@ -205,4 +223,118 @@ body {
   margin-bottom: 1rem;
   color: var(--color-grey-dark-3);
 }
+
+/* div.tab__item--container {
+  clear: both;
+  width: 80%;
+  height: 30rem;
+  overflow: auto;
+}
+
+html>body div.tab__item--container {
+  overflow: hidden;
+  width: 80%;
+}
+
+div.tab__item--container table {
+  float: left;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  white-space: nowrap;
+}
+
+table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.col-number {
+  width: 10%;
+}
+.col-name {
+  width: 20%;
+}
+.col-department{
+  width: 30%;
+}
+.col-appointment{
+  width: 20%;
+}
+.col-actions{
+  width: 20%;
+}
+
+tbody.table__body {
+	display: block;
+	height: 25rem;
+	overflow: auto;
+  width: 100%;
+}
+
+thead.table__fixed-header tr {
+  position: relative;
+}
+
+thead.table__fixed-header {
+	display: table;
+	overflow: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+/* table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+thead.table__fixed-header tr {
+  position: relative;
+}
+
+.tab__item--container {
+  clear: both;
+  width: 80%;
+  height: 30rem;
+  overflow: auto;
+}
+
+thead.table__fixed-header {
+	display: table;
+	overflow: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+tbody.table__body {
+	display: block;
+	height: 25rem;
+	overflow: auto;
+  width: 100%;
+} */
 
